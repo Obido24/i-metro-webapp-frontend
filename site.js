@@ -105,6 +105,167 @@
       object-position: top center;
       display: block;
     }
+    .device-scene {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 30rem;
+      padding: 2rem 1.5rem;
+      border-radius: 2rem;
+      overflow: hidden;
+      isolation: isolate;
+    }
+    .device-scene::before {
+      content: "";
+      position: absolute;
+      inset: 8% 10% auto;
+      height: 62%;
+      border-radius: 2rem;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(241, 247, 243, 0.92));
+      box-shadow:
+        0 30px 60px -48px rgba(0, 54, 26, 0.35),
+        0 1px 0 rgba(255, 255, 255, 0.7) inset;
+      z-index: -2;
+    }
+    .device-scene::after {
+      content: "";
+      position: absolute;
+      inset: auto 15% 5%;
+      height: 1.1rem;
+      border-radius: 9999px;
+      background: radial-gradient(circle, rgba(0, 0, 0, 0.18), transparent 72%);
+      filter: blur(12px);
+      z-index: -3;
+    }
+    .device-scene[data-scene="table"]::before {
+      inset: 6% 5% auto;
+      height: 70%;
+      background:
+        linear-gradient(145deg, rgba(245, 249, 246, 0.95), rgba(227, 238, 231, 0.98));
+      border: 1px solid rgba(193, 201, 191, 0.45);
+    }
+    .device-scene[data-scene="table"] .device-mockup {
+      transform: rotate(-10deg);
+    }
+    .device-scene[data-scene="table"] .device-scene-accent {
+      position: absolute;
+      border-radius: 9999px;
+      background: rgba(157, 211, 170, 0.18);
+      filter: blur(1px);
+      z-index: -1;
+    }
+    .device-scene[data-scene="table"] .device-scene-accent:first-of-type {
+      width: 7rem;
+      height: 7rem;
+      top: 1.5rem;
+      right: 2rem;
+    }
+    .device-scene[data-scene="table"] .device-scene-accent:last-of-type {
+      width: 9rem;
+      height: 9rem;
+      bottom: 2rem;
+      left: 1rem;
+      background: rgba(254, 183, 29, 0.12);
+    }
+    .device-scene[data-scene="held"]::before {
+      inset: 12% 12% auto;
+      height: 54%;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.96), rgba(236, 244, 238, 0.92));
+    }
+    .device-scene[data-scene="held"] .device-mockup {
+      transform: rotate(4deg) translateY(0.2rem);
+    }
+    .device-scene-hand {
+      position: absolute;
+      bottom: 2.25rem;
+      width: 7rem;
+      height: 5rem;
+      border-radius: 2.5rem 2.5rem 1.8rem 1.8rem;
+      background:
+        linear-gradient(180deg, rgba(199, 151, 118, 0.9), rgba(158, 107, 79, 0.92));
+      box-shadow:
+        0 18px 24px -20px rgba(75, 39, 23, 0.5),
+        0 4px 8px rgba(255, 255, 255, 0.12) inset;
+      z-index: 0;
+    }
+    .device-scene-hand::before,
+    .device-scene-hand::after {
+      content: "";
+      position: absolute;
+      top: -0.4rem;
+      width: 1.2rem;
+      height: 2.8rem;
+      border-radius: 9999px;
+      background: inherit;
+      box-shadow: inherit;
+    }
+    .device-scene-hand::before {
+      left: 1rem;
+      transform: rotate(-8deg);
+    }
+    .device-scene-hand::after {
+      right: 1rem;
+      transform: rotate(10deg);
+    }
+    .device-scene-hand[data-hand="left"] {
+      left: calc(50% - 7.6rem);
+      transform: rotate(-16deg);
+    }
+    .device-scene-hand[data-hand="right"] {
+      right: calc(50% - 7.6rem);
+      transform: rotate(16deg);
+    }
+    .device-scene-chip {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      min-width: 8.2rem;
+      max-width: 10.5rem;
+      padding: 0.8rem 1rem;
+      border-radius: 1.15rem;
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(193, 201, 191, 0.42);
+      box-shadow: 0 16px 30px -24px rgba(0, 54, 26, 0.35);
+      z-index: 2;
+    }
+    .device-scene-chip strong {
+      display: block;
+      color: #00361a;
+      font-size: 0.92rem;
+      line-height: 1.1;
+    }
+    .device-scene-chip span:last-child {
+      color: #5b645f;
+      font-size: 0.78rem;
+      line-height: 1.25;
+    }
+    .device-scene-chip .material-symbols-outlined {
+      font-size: 1.15rem;
+      color: #00361a;
+    }
+    .device-scene-chip[data-chip="top-left"] {
+      top: 2.25rem;
+      left: 0.4rem;
+    }
+    .device-scene-chip[data-chip="mid-right"] {
+      top: 44%;
+      right: 0;
+    }
+    .device-scene-chip[data-chip="bottom-left"] {
+      bottom: 1.6rem;
+      left: 1rem;
+    }
+    .device-scene-chip[data-chip="top-right"] {
+      top: 2.4rem;
+      right: 0.75rem;
+    }
+    .device-scene-chip[data-chip="bottom-right"] {
+      bottom: 1.25rem;
+      right: 0.65rem;
+    }
     .i-metro-mobile-menu {
       max-height: 0;
       overflow: hidden;
@@ -348,6 +509,64 @@
       }
       .device-mockup-screen {
         border-radius: 1.5rem;
+      }
+      .device-scene {
+        min-height: 25rem;
+        padding: 1.35rem 0.75rem 1.6rem;
+        border-radius: 1.6rem;
+      }
+      .device-scene::before {
+        inset: 10% 4% auto;
+        height: 64%;
+        border-radius: 1.55rem;
+      }
+      .device-scene-chip {
+        min-width: 7.1rem;
+        max-width: 8.4rem;
+        padding: 0.68rem 0.8rem;
+        border-radius: 1rem;
+      }
+      .device-scene-chip strong {
+        font-size: 0.82rem;
+      }
+      .device-scene-chip span:last-child {
+        font-size: 0.72rem;
+      }
+      .device-scene-chip[data-chip="top-left"] {
+        top: 1rem;
+        left: -0.1rem;
+      }
+      .device-scene-chip[data-chip="mid-right"] {
+        top: 43%;
+        right: -0.15rem;
+      }
+      .device-scene-chip[data-chip="bottom-left"] {
+        bottom: 0.9rem;
+        left: 0.25rem;
+      }
+      .device-scene-chip[data-chip="top-right"] {
+        top: 1.15rem;
+        right: 0.1rem;
+      }
+      .device-scene-chip[data-chip="bottom-right"] {
+        bottom: 0.75rem;
+        right: 0.2rem;
+      }
+      .device-scene-hand {
+        width: 5.3rem;
+        height: 3.9rem;
+        bottom: 1.35rem;
+      }
+      .device-scene-hand::before,
+      .device-scene-hand::after {
+        width: 0.92rem;
+        height: 2.15rem;
+      }
+      .device-scene-hand[data-hand="left"] {
+        left: calc(50% - 5.85rem);
+      }
+      .device-scene-hand[data-hand="right"] {
+        right: calc(50% - 5.85rem);
       }
       [class~="w-[99.8%]"],
       [class~="w-[98%]"],
