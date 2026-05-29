@@ -174,7 +174,7 @@ const supportTopics = {
     summary: 'Call our toll-free line for urgent travel, payment, or account help.',
     description: 'Phone support is available Monday to Saturday, 9:00am to 6:00pm, for time-sensitive issues.',
     bullets: [
-      'Toll-free line: +2347070050444',
+      `Toll-free line: ${SUPPORT_PHONE_INTL}`,
       'Use this line for urgent trip disruptions, account lockouts, and payment checks.',
       'If your issue needs a record, the agent can help you submit a formal ticket after the call.'
     ],
@@ -249,6 +249,10 @@ const modalSummary = document.getElementById('support-modal-summary');
 const modalContent = document.getElementById('support-modal-content');
 const modalFooter = document.getElementById('support-modal-footer');
 const modalPanel = modal?.querySelector(':scope > div:last-child');
+const SUPPORT_PHONE_LOCAL = '07070050444';
+const SUPPORT_PHONE_INTL = '+2347070050444';
+const SUPPORT_PHONE_HREF = 'tel:07070050444';
+const SUPPORT_WHATSAPP_URL = 'https://wa.me/2347070050444';
 function escapeHtml(value) {
   return String(value)
     .replace(/&/g, '&amp;')
@@ -373,6 +377,16 @@ function renderTopic(topic) {
 }
 
 function openSupportTopic(topicId) {
+  if (topicId === 'phone-support') {
+    window.location.href = SUPPORT_PHONE_HREF;
+    return;
+  }
+
+  if (topicId === 'whatsapp-support') {
+    window.location.href = SUPPORT_WHATSAPP_URL;
+    return;
+  }
+
   renderTopic(supportTopics[topicId] || supportTopics['help-center']);
 }
 
@@ -555,3 +569,4 @@ async function submitSupportTicket(event) {
 }
 
 supportForm?.addEventListener('submit', submitSupportTicket);
+
