@@ -1,11 +1,11 @@
 (() => {
   const navItems = [
-    ['Home', './index.html'],
-    ['Services', './services.html'],
-    ['How It Works', './how-it-works.html'],
-    ['Download', './download.html'],
-    ['Support', './support.html'],
-    ['About', './about.html'],
+    ['Home', '/'],
+    ['Services', '/services'],
+    ['How It Works', '/how-it-works'],
+    ['Download', '/download'],
+    ['Support', '/support'],
+    ['About', '/about'],
   ];
 
   const style = document.createElement('style');
