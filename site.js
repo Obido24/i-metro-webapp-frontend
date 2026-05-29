@@ -52,6 +52,59 @@
       box-shadow: 0 4px 20px -2px rgba(26, 77, 46, 0.08);
       border: 1px solid #e9ecef;
     }
+    .device-mockup {
+      position: relative;
+      width: 100%;
+      border-radius: 2.4rem;
+      background:
+        linear-gradient(180deg, #1e2328 0%, #0d1116 100%);
+      box-shadow:
+        0 30px 60px -30px rgba(5, 16, 10, 0.5),
+        0 10px 20px rgba(255, 255, 255, 0.08) inset;
+      padding: 0.72rem;
+    }
+    .device-mockup::before {
+      content: "";
+      position: absolute;
+      top: 0.75rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 34%;
+      height: 1.55rem;
+      border-radius: 9999px;
+      background: rgba(7, 10, 13, 0.95);
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08) inset;
+      z-index: 3;
+    }
+    .device-mockup::after {
+      content: "";
+      position: absolute;
+      top: 1.18rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0.42rem;
+      height: 0.42rem;
+      border-radius: 9999px;
+      background: rgba(58, 73, 90, 0.95);
+      z-index: 4;
+    }
+    .device-mockup-screen {
+      position: relative;
+      overflow: hidden;
+      border-radius: 1.9rem;
+      background: #ffffff;
+      aspect-ratio: 9 / 19.5;
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.45),
+        0 0 0 1px rgba(193, 201, 191, 0.3);
+    }
+    .device-mockup-screen img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
     .i-metro-mobile-menu {
       max-height: 0;
       overflow: hidden;
@@ -279,6 +332,22 @@
       }
       [class~="aspect-square"] {
         aspect-ratio: 0.95 / 1 !important;
+      }
+      .device-mockup {
+        max-width: 18rem;
+        padding: 0.58rem;
+        border-radius: 2rem;
+      }
+      .device-mockup::before {
+        top: 0.62rem;
+        width: 38%;
+        height: 1.3rem;
+      }
+      .device-mockup::after {
+        top: 1rem;
+      }
+      .device-mockup-screen {
+        border-radius: 1.5rem;
       }
       [class~="w-[99.8%]"],
       [class~="w-[98%]"],
