@@ -102,6 +102,80 @@
       box-shadow: 0 18px 36px -18px rgba(26, 77, 46, 0.28);
       border-color: rgba(26, 77, 46, 0.18);
     }
+    @media (max-width: 767px) {
+      .px-margin-desktop {
+        padding-left: 1.25rem !important;
+        padding-right: 1.25rem !important;
+      }
+      .py-unit-xxl {
+        padding-top: 4.5rem !important;
+        padding-bottom: 4.5rem !important;
+      }
+      .text-display-lg {
+        font-size: clamp(2.35rem, 11vw, 3.8rem) !important;
+        line-height: 1.02 !important;
+      }
+      .text-headline-lg {
+        font-size: clamp(1.85rem, 8.5vw, 2.6rem) !important;
+        line-height: 1.08 !important;
+      }
+      .text-title-large {
+        font-size: 1.5rem !important;
+        line-height: 1.2 !important;
+      }
+      .text-body-lg {
+        font-size: 1rem !important;
+        line-height: 1.65 !important;
+      }
+      .max-w-container-max {
+        width: 100%;
+      }
+      .gap-unit-xl,
+      .gap-unit-xxl,
+      .gap-gutter {
+        gap: 1.25rem !important;
+      }
+      .rounded-\[40px\] {
+        border-radius: 1.75rem !important;
+      }
+      .i-metro-scroll-line {
+        height: 2px;
+      }
+      header .max-w-container-max,
+      footer .max-w-\[1280px\],
+      footer .max-w-container-max {
+        width: 100%;
+      }
+      main.pt-32 {
+        padding-top: 6.75rem !important;
+      }
+      [class~="h-[614px]"] {
+        min-height: 28rem !important;
+        height: auto !important;
+        padding-top: 6rem !important;
+        padding-bottom: 6rem !important;
+      }
+      [class~="text-[48px]"] {
+        font-size: clamp(2.35rem, 10vw, 3.5rem) !important;
+        line-height: 1.08 !important;
+      }
+      [class~="max-w-[540px]"],
+      [class~="max-w-[320px]"],
+      [class~="max-w-[340px]"] {
+        max-width: 100% !important;
+      }
+      [class~="w-[99.8%]"],
+      [class~="w-[98%]"],
+      [class~="w-[95%]"] {
+        width: 100% !important;
+      }
+      main br {
+        display: none;
+      }
+      .step-card {
+        min-height: auto !important;
+      }
+    }
     @keyframes site-grid-drift {
       0% {
         background-position: 0 0, 0 0, 0 0;
