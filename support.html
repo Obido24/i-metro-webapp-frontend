@@ -308,10 +308,10 @@
 </section>
 </main>
 <!-- Support detail modal -->
-<div id="support-modal" class="fixed inset-0 z-[60] hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="support-modal-title">
+<div id="support-modal" class="fixed inset-0 z-[60] hidden items-start justify-center overflow-y-auto overscroll-contain px-4 py-6 md:items-center md:p-4" role="dialog" aria-modal="true" aria-labelledby="support-modal-title">
   <div class="absolute inset-0 bg-slate-950/60 backdrop-blur-sm" data-close-support-modal></div>
-  <div class="relative w-full max-w-3xl overflow-hidden rounded-3xl border border-outline-variant/30 bg-surface-container-lowest shadow-2xl">
-    <div class="flex items-start justify-between gap-4 border-b border-outline-variant/30 bg-surface-container-low px-6 py-5">
+  <div class="relative my-auto w-full max-w-3xl overflow-y-auto rounded-3xl border border-outline-variant/30 bg-surface-container-lowest shadow-2xl max-h-[calc(100vh-3rem)] md:max-h-[min(90vh,56rem)]" style="-webkit-overflow-scrolling: touch;">
+    <div class="sticky top-0 z-10 flex items-start justify-between gap-4 border-b border-outline-variant/30 bg-surface-container-low px-5 py-4 md:px-6 md:py-5">
       <div>
         <p id="support-modal-eyebrow" class="text-xs font-bold uppercase tracking-[0.3em] text-secondary">I-Metro Support</p>
         <h3 id="support-modal-title" class="mt-2 text-2xl font-extrabold text-primary"></h3>
@@ -321,7 +321,7 @@
         <span class="material-symbols-outlined text-xl">close</span>
       </button>
     </div>
-    <div class="grid gap-6 px-6 py-6 md:grid-cols-[1.35fr_0.65fr]">
+    <div class="grid gap-5 px-5 py-5 md:gap-6 md:px-6 md:py-6 md:grid-cols-[1.35fr_0.65fr]">
       <div class="space-y-5">
         <div id="support-modal-summary" class="rounded-2xl border border-primary/10 bg-primary/5 p-5 text-on-surface-variant"></div>
         <div id="support-modal-content" class="space-y-3"></div>

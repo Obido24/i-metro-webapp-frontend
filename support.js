@@ -248,6 +248,7 @@ const modalSubtitle = document.getElementById('support-modal-subtitle');
 const modalSummary = document.getElementById('support-modal-summary');
 const modalContent = document.getElementById('support-modal-content');
 const modalFooter = document.getElementById('support-modal-footer');
+const modalPanel = modal?.querySelector(':scope > div:last-child');
 function escapeHtml(value) {
   return String(value)
     .replace(/&/g, '&amp;')
@@ -364,6 +365,11 @@ function renderTopic(topic) {
   modal.classList.remove('hidden');
   modal.classList.add('flex');
   document.body.classList.add('overflow-hidden');
+  document.documentElement.classList.add('overflow-hidden');
+  modal.scrollTop = 0;
+  if (modalPanel instanceof HTMLElement) {
+    modalPanel.scrollTop = 0;
+  }
 }
 
 function openSupportTopic(topicId) {
@@ -375,6 +381,7 @@ function closeSupportModal() {
   modal.classList.add('hidden');
   modal.classList.remove('flex');
   document.body.classList.remove('overflow-hidden');
+  document.documentElement.classList.remove('overflow-hidden');
 }
 
 searchInput?.addEventListener('focus', () => {
