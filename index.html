@@ -450,14 +450,19 @@
 </div>
 <div class="p-unit-lg md:w-1/2">
 <h3 class="font-headline-md text-primary mb-unit-md">Quick Help</h3>
-<form class="space-y-4">
+<form class="space-y-4" id="support-ticket-form">
+<div class="hidden rounded-xl border px-4 py-3 text-sm font-medium" id="support-ticket-feedback" role="status" aria-live="polite"></div>
 <div>
-<label class="block font-label-md text-on-surface-variant mb-1">Full Name</label>
-<input class="w-full rounded-lg border-outline-variant focus:border-primary focus:ring-primary" placeholder="John Doe" type="text"/>
+<label class="block font-label-md text-on-surface-variant mb-1" for="support-full-name">Full Name</label>
+<input autocomplete="name" class="w-full rounded-lg border-outline-variant focus:border-primary focus:ring-primary" id="support-full-name" name="name" placeholder="John Doe" required type="text"/>
 </div>
 <div>
-<label class="block font-label-md text-on-surface-variant mb-1">Inquiry Type</label>
-<select class="w-full rounded-lg border-outline-variant focus:border-primary focus:ring-primary">
+<label class="block font-label-md text-on-surface-variant mb-1" for="support-email">Email Address</label>
+<input autocomplete="email" class="w-full rounded-lg border-outline-variant focus:border-primary focus:ring-primary" id="support-email" name="email" placeholder="john@example.com" required type="email"/>
+</div>
+<div>
+<label class="block font-label-md text-on-surface-variant mb-1" for="support-category">Inquiry Type</label>
+<select class="w-full rounded-lg border-outline-variant focus:border-primary focus:ring-primary" id="support-category" name="subject" required>
 <option>Booking Issue</option>
 <option>Payment Support</option>
 <option>Refund Request</option>
@@ -465,10 +470,14 @@
 </select>
 </div>
 <div>
-<label class="block font-label-md text-on-surface-variant mb-1">Message</label>
-<textarea class="w-full rounded-lg border-outline-variant focus:border-primary focus:ring-primary" placeholder="How can we help you today?" rows="3"></textarea>
+<label class="block font-label-md text-on-surface-variant mb-1" for="support-message">Message</label>
+<textarea class="w-full rounded-lg border-outline-variant focus:border-primary focus:ring-primary" id="support-message" name="message" placeholder="How can we help you today?" required rows="3"></textarea>
 </div>
-<button class="w-full accent-gradient text-on-primary font-label-md py-3 rounded-lg shadow-level-1" type="button">
+<div class="flex items-start gap-3">
+<input class="mt-1 rounded border-outline-variant text-primary focus:ring-primary" id="support-privacy-consent" required type="checkbox"/>
+<label class="text-sm text-on-surface-variant" for="support-privacy-consent">I agree to the <a class="text-primary underline" href="/privacy">Privacy Policy</a></label>
+</div>
+<button class="w-full accent-gradient text-on-primary font-label-md py-3 rounded-lg shadow-level-1 disabled:cursor-not-allowed disabled:opacity-70" id="support-ticket-submit" type="submit">
                                 Send Message
                             </button>
 </form>
@@ -516,7 +525,9 @@
     <span>ridei-metro.com</span>
   </div>
 </footer>
+<script src="/site-config.js"></script>
 <script src="/site.js"></script>
+<script src="/support.js"></script>
 <script>
 
         // Add subtle animation classes to cards on scroll

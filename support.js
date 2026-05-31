@@ -494,14 +494,31 @@ function setFormFeedback(message, tone = 'success') {
   if (!supportFormFeedback) return;
 
   supportFormFeedback.textContent = message;
-  supportFormFeedback.classList.remove('hidden', 'support-feedback-success', 'support-feedback-error', 'support-feedback-info');
+  supportFormFeedback.classList.remove(
+    'hidden',
+    'support-feedback-success',
+    'support-feedback-error',
+    'support-feedback-info',
+    'border-emerald-200',
+    'bg-emerald-50',
+    'text-emerald-900',
+    'border-rose-200',
+    'bg-rose-50',
+    'text-rose-900',
+    'border-slate-200',
+    'bg-slate-50',
+    'text-slate-700'
+  );
 
   if (tone === 'success') {
     supportFormFeedback.classList.add('support-feedback-success');
+    supportFormFeedback.classList.add('border-emerald-200', 'bg-emerald-50', 'text-emerald-900');
   } else if (tone === 'error') {
     supportFormFeedback.classList.add('support-feedback-error');
+    supportFormFeedback.classList.add('border-rose-200', 'bg-rose-50', 'text-rose-900');
   } else {
     supportFormFeedback.classList.add('support-feedback-info');
+    supportFormFeedback.classList.add('border-slate-200', 'bg-slate-50', 'text-slate-700');
   }
 }
 
