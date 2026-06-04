@@ -171,11 +171,12 @@ const supportTopics = {
     badge: 'Direct support',
     icon: 'phone_in_talk',
     title: 'Phone support',
-    summary: 'Call our toll-free line for urgent travel, payment, or account help.',
+    summary: 'Call our customer service lines for urgent travel, payment, or account help.',
     description: 'Phone support is available Monday to Saturday, 9:00am to 6:00pm, for time-sensitive issues.',
     bullets: [
-      `Toll-free line: ${SUPPORT_PHONE_INTL}`,
-      'Use this line for urgent trip disruptions, account lockouts, and payment checks.',
+      `Primary line: ${SUPPORT_PHONE_INTL}`,
+      `Alternate line: ${SUPPORT_PHONE_ALT_LOCAL}`,
+      'Use these lines for urgent trip disruptions, account lockouts, and payment checks.',
       'If your issue needs a record, the agent can help you submit a formal ticket after the call.'
     ],
     note: 'Average escalation response for formal tickets is 4 business hours.',
@@ -252,6 +253,8 @@ const modalPanel = modal?.querySelector(':scope > div:last-child');
 const SUPPORT_PHONE_LOCAL = '07070050444';
 const SUPPORT_PHONE_INTL = '+2347070050444';
 const SUPPORT_PHONE_HREF = 'tel:07070050444';
+const SUPPORT_PHONE_ALT_LOCAL = '09128066666';
+const SUPPORT_PHONE_ALT_HREF = 'tel:09128066666';
 const SUPPORT_WHATSAPP_URL = 'https://wa.me/2347070050444';
 function escapeHtml(value) {
   return String(value)
