@@ -166,6 +166,10 @@
                             Explore the service stack
                             <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
 </a>
+<a class="bg-primary-fixed text-primary px-8 py-4 rounded-lg font-label-md text-label-md shadow-soft inline-flex items-center gap-2 hover:bg-primary-fixed-dim transition-colors" href="#bus-hire">
+                            Hire a Bus
+                            <span class="material-symbols-outlined">directions_bus</span>
+                        </a>
 </div>
 </div>
 <div class="lg:col-span-6 relative">
@@ -258,6 +262,107 @@
 <p class="font-body-md text-body-md text-on-surface-variant">
                         Track your carbon footprint, travel spend, and frequent routes. Download tax-ready receipts with a single tap.
                     </p>
+</div>
+</div>
+</section>
+<!-- Bus Hire / Charter -->
+<section class="px-margin-desktop max-w-container-max mx-auto py-unit-xxl border-t border-outline-variant/10" id="bus-hire">
+<div class="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-8 items-start">
+<div class="bg-primary text-on-primary rounded-xl p-8 shadow-lift relative overflow-hidden">
+<span class="inline-flex items-center gap-2 bg-white/10 text-white px-4 py-1.5 rounded-full font-label-sm text-label-sm mb-6">
+<span class="material-symbols-outlined text-[18px]">event_seat</span>
+                        Bus Hire &amp; Charter Services
+                    </span>
+<h2 class="font-headline-lg text-headline-lg mb-4">Move your guests with calm, coordinated comfort.</h2>
+<p class="font-body-lg text-on-primary/80 mb-6">
+                        Request I-Metro buses for programmes, events, occasions, weddings, school trips, church programmes, corporate events, airport transfers, and special movements.
+                    </p>
+<div class="grid gap-4 sm:grid-cols-2 mb-6">
+<div class="rounded-2xl bg-white/10 p-4 border border-white/10">
+<p class="text-sm font-semibold">Best for</p>
+<p class="mt-2 text-sm text-on-primary/80">Events, programmes, school movement, executive transfers, and chartered group trips.</p>
+</div>
+<div class="rounded-2xl bg-white/10 p-4 border border-white/10">
+<p class="text-sm font-semibold">Planning note</p>
+<p class="mt-2 text-sm text-on-primary/80">Early requests give a higher chance of bus availability. Kindly submit your request ahead of time.</p>
+</div>
+</div>
+<ul class="space-y-3 text-sm text-on-primary/85">
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-container mt-0.5">check_circle</span><span>Multiple buses for large movements and guest logistics.</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-container mt-0.5">check_circle</span><span>Flexible dispatch planning for one-way, return, and repeated trips.</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-container mt-0.5">check_circle</span><span>Fast internal review and follow-up from the I-Metro operations team.</span></li>
+</ul>
+<span class="material-symbols-outlined absolute -bottom-8 -right-8 text-[180px] opacity-10">directions_bus</span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/20 shadow-soft p-6 md:p-8">
+<div class="mb-6">
+<p class="text-sm font-bold uppercase tracking-[0.18em] text-on-surface-variant">Charter request</p>
+<h3 class="mt-2 font-headline-md text-headline-md text-primary">Request I-Metro Bus Service</h3>
+<p class="mt-3 text-body-md text-on-surface-variant">Tell us about your movement and our team will review the request and contact you shortly.</p>
+</div>
+<div class="mb-5 rounded-2xl border border-secondary-container/30 bg-secondary-container/10 px-4 py-3 text-sm text-on-surface">
+                        Early requests give a higher chance of bus availability. Kindly submit your request ahead of time.
+                    </div>
+<form id="bus-hire-request-form" class="space-y-5">
+<div id="bus-hire-feedback" class="hidden rounded-2xl border px-4 py-3 text-sm"></div>
+<div class="grid gap-4 md:grid-cols-2">
+<label class="block">
+<span class="mb-2 block text-sm font-semibold text-on-surface">Full Name / Organization Name</span>
+<input id="bus-hire-name" type="text" class="w-full rounded-xl border border-outline-variant/30 bg-white px-4 py-3 text-on-surface focus:border-primary focus:ring-primary" required />
+</label>
+<label class="block">
+<span class="mb-2 block text-sm font-semibold text-on-surface">Phone Number</span>
+<input id="bus-hire-phone" type="tel" class="w-full rounded-xl border border-outline-variant/30 bg-white px-4 py-3 text-on-surface focus:border-primary focus:ring-primary" required />
+</label>
+<label class="block">
+<span class="mb-2 block text-sm font-semibold text-on-surface">WhatsApp Number</span>
+<input id="bus-hire-whatsapp" type="tel" class="w-full rounded-xl border border-outline-variant/30 bg-white px-4 py-3 text-on-surface focus:border-primary focus:ring-primary" required />
+</label>
+<label class="block">
+<span class="mb-2 block text-sm font-semibold text-on-surface">Email Address <span class="text-on-surface-variant font-normal">(optional)</span></span>
+<input id="bus-hire-email" type="email" class="w-full rounded-xl border border-outline-variant/30 bg-white px-4 py-3 text-on-surface focus:border-primary focus:ring-primary" />
+</label>
+<label class="block">
+<span class="mb-2 block text-sm font-semibold text-on-surface">Pick-up Point</span>
+<input id="bus-hire-pickup" type="text" class="w-full rounded-xl border border-outline-variant/30 bg-white px-4 py-3 text-on-surface focus:border-primary focus:ring-primary" required />
+</label>
+<label class="block">
+<span class="mb-2 block text-sm font-semibold text-on-surface">Drop-off Point</span>
+<input id="bus-hire-dropoff" type="text" class="w-full rounded-xl border border-outline-variant/30 bg-white px-4 py-3 text-on-surface focus:border-primary focus:ring-primary" required />
+</label>
+<label class="block md:col-span-2">
+<span class="mb-2 block text-sm font-semibold text-on-surface">Destination / Event Location</span>
+<input id="bus-hire-destination" type="text" class="w-full rounded-xl border border-outline-variant/30 bg-white px-4 py-3 text-on-surface focus:border-primary focus:ring-primary" required />
+</label>
+<label class="block">
+<span class="mb-2 block text-sm font-semibold text-on-surface">Date of Service</span>
+<input id="bus-hire-date" type="date" class="w-full rounded-xl border border-outline-variant/30 bg-white px-4 py-3 text-on-surface focus:border-primary focus:ring-primary" required />
+</label>
+<label class="block">
+<span class="mb-2 block text-sm font-semibold text-on-surface">Time of Service</span>
+<input id="bus-hire-time" type="time" class="w-full rounded-xl border border-outline-variant/30 bg-white px-4 py-3 text-on-surface focus:border-primary focus:ring-primary" required />
+</label>
+<label class="block">
+<span class="mb-2 block text-sm font-semibold text-on-surface">Number of Trips</span>
+<input id="bus-hire-trips" type="number" min="1" class="w-full rounded-xl border border-outline-variant/30 bg-white px-4 py-3 text-on-surface focus:border-primary focus:ring-primary" required />
+</label>
+<label class="block">
+<span class="mb-2 block text-sm font-semibold text-on-surface">Number of Buses Needed</span>
+<input id="bus-hire-buses" type="number" min="1" class="w-full rounded-xl border border-outline-variant/30 bg-white px-4 py-3 text-on-surface focus:border-primary focus:ring-primary" required />
+</label>
+<label class="block md:col-span-2">
+<span class="mb-2 block text-sm font-semibold text-on-surface">Type of Event / Purpose of Service</span>
+<input id="bus-hire-purpose" type="text" class="w-full rounded-xl border border-outline-variant/30 bg-white px-4 py-3 text-on-surface focus:border-primary focus:ring-primary" placeholder="Wedding, church programme, airport transfer, school trip..." required />
+</label>
+<label class="block md:col-span-2">
+<span class="mb-2 block text-sm font-semibold text-on-surface">Additional Notes / Special Request</span>
+<textarea id="bus-hire-notes" rows="4" class="w-full rounded-xl border border-outline-variant/30 bg-white px-4 py-3 text-on-surface focus:border-primary focus:ring-primary" placeholder="Any special movement instructions, passenger notes, or timing details"></textarea>
+</label>
+</div>
+<button id="bus-hire-submit" type="submit" class="w-full inline-flex items-center justify-center accent-gradient text-white px-8 py-4 rounded-xl font-label-md shadow-lift hover:scale-[0.99] transition-transform">
+                        Submit Bus Hire Request
+                    </button>
+</form>
 </div>
 </div>
 </section>
@@ -357,11 +462,11 @@
       <h4 class="font-bold text-secondary-container mb-4">Explore</h4>
       <div class="space-y-2 text-white/80">
         <a href="/" class="block hover:text-secondary-container">Home</a>
+        <a href="/about" class="block hover:text-secondary-container">About</a>
         <a href="/services" class="block hover:text-secondary-container">Services</a>
         <a href="/how-it-works" class="block hover:text-secondary-container">How It Works</a>
         <a href="/download" class="block hover:text-secondary-container">Download</a>
         <a href="/support" class="block hover:text-secondary-container">Contact Us</a>
-        <a href="/about" class="block hover:text-secondary-container">About</a>
       </div>
     </div>
     <div>
@@ -383,6 +488,8 @@
   </div>
 </footer>
 <script src="/site.js"></script>
+<script src="/site-config.js"></script>
+<script src="/bus-hire.js"></script>
 <script>
 
         // Simple observer for fade-in effects
